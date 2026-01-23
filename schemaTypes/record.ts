@@ -86,6 +86,16 @@ export const record = defineType({
       description: 'Used for sorting and display order',
       validation: (rule) => rule.required().integer().min(0),
     }),
+    defineField({
+      name: 'careInstructionLink',
+      title: 'Care Instruction Link',
+      type: 'url',
+      description: 'Link to care instructions for the record',
+      validation: (rule) =>
+        rule.uri({
+          scheme: ['http', 'https'],
+        }),
+    }),
   ],
   preview: {
     select: {
