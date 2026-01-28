@@ -9,13 +9,21 @@ export const structure: StructureResolver = (S) =>
         .child(
           S.documentTypeList('record')
             .title('Records')
-            .defaultOrdering([{field: 'order', direction: 'asc'}])
+            .defaultOrdering([{field: 'order', direction: 'asc'}]),
         ),
       S.listItem()
         .title('Live Events')
         .child(
           S.documentTypeList('liveEvent')
             .title('Live Events')
-            .defaultOrdering([{field: 'date', direction: 'asc'}])
+            .defaultOrdering([{field: 'date', direction: 'asc'}]),
+        ),
+      S.listItem()
+        .title('Orders')
+        .schemaType('order')
+        .child(
+          S.documentTypeList('order')
+            .title('All orders')
+            .defaultOrdering([{field: 'createdAt', direction: 'desc'}]),
         ),
     ])
