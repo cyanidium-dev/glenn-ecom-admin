@@ -127,6 +127,13 @@ export const order = defineType({
       name: 'totalPrice',
       title: 'Total price (CHF)',
       type: 'number',
+      description: 'Total price + shipping in Swiss Francs',
+      readOnly: true,
+    }),
+    defineField({
+      name: 'shippingCost',
+      title: 'Shipping Cost (CHF)',
+      type: 'number',
       readOnly: true,
     }),
     defineField({
