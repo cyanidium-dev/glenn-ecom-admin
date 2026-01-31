@@ -23,6 +23,7 @@ export const order = defineType({
           {title: 'pending', value: 'pending'},
           {title: 'paid', value: 'paid'},
           {title: 'error', value: 'error'},
+          {title: 'sent', value: 'sent'},
         ],
       },
       initialValue: 'pending',
